@@ -1,0 +1,65 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	float saldo, total;
+	char tipodeC, opcion;
+	cout << "\n Banco de Ahorros del Mundo \n ";
+	cout << "\n *************CAJERO AUTOMATICO************** \n ";
+	cout << "\n Ingrese Saldo: \n\n ";
+	cin >> saldo;
+	if (saldo >= 35)
+	{
+		cout << " \n -------- TRANSACCIONES -------- ";
+		cout << "\n\n Eliga Tipo de Cuenta 1 o 2 \n\n";
+		cout << "1)CUENTA CORRIENTE \n\n";
+		cout << "2)CUENTA DE AHORROS \n\n";
+		cin >> tipodeC;
+		if (tipodeC == '1')
+		{
+			cout << "\n$$$$$$ Cuenta Corriente $$$$$$$$ ";
+			cout << "\n\n SALDO = " << saldo << "\n \n Opcion Elegida: " << " Cuenta Corriente";
+			cout << "\n\n Seleccione cuanto $ desa retirar\n";
+			cout << "\n 1) $500 \n 2) $1000 \n 3) $2000 \n 4) $5000 \n";
+			cout << "\nPresione el numero que indique la cantidad que desea retirar\n\n";
+
+		}
+		else
+		{
+			cout << "\n $$$$$$ Cuenta de Ahorros $$$$$$$$ ";
+			cout << "\n \n SALDO = " << saldo << "\n \n Opcion Elegida: " << " Cuenta de Ahorros";
+			cout << "\n\n Seleccione cuanto $ desa retirar\n";
+			cout << "\n 1) $500 \n 2) $1000 \n 3) $2000 \n 4) $5000 \n";
+			cout << "\nPresione el numero que indique la cantidad que desea retirar\n\n";
+
+		}
+		cin >> opcion;
+		if (opcion == '1')
+		{
+			total = saldo - 500;
+		}
+		else
+		{
+			if (opcion == '2')
+			{
+				total = saldo - 1000;
+			}
+			else
+			{
+				total = saldo - 2000;
+			}
+			if (opcion == '3')
+			{
+				total = saldo - 5000;
+			}
+		}
+		cout << "\n Usted Eligio la Opcion: " << opcion;
+		cout << "\n\n Su Saldo Ahora es de : " << total;
+		cout << "\n\n Gracias\n\n";
+		
+	}
+	{
+		system("pause");
+	}
+}
