@@ -1,0 +1,60 @@
+#include<stdio.h>
+#include<iostream>
+using namespace std;
+
+#include<string.h>
+void fun(int[], int);
+void main()
+
+{
+	const int t = 10;
+	int a[t], i;
+	int j;
+	for (i = 0; i<t; i++)
+	{
+		cout << "ingresar un numeroen la posicion [" << i << "]" << endl;
+		cin >> a[i];
+	}
+	fun(a, t);
+}
+void fun(int b[], int p)
+
+{
+	int cont = 0, i, primo;
+	const int t = 10;
+	for (int j = 0; j<t; j++)
+	{
+		if (b[j] % 2 == 0)
+			if (b[j] % 4 == 0)
+				cout << "el numero multiplo de 2 y de 4 es : " << b[j] << endl;
+	}
+	for (int j = 0; j<t; j++)
+	{
+		if (b[j] % 3 == 0)
+			if (b[j] % 6 == 0)
+				cout << "el numero multiplo de 3 y de 6 es : " << b[j] << endl;
+	}
+	for (int j = 0; j<t; j++)
+	{
+		if (b[j] % 5 == 0)
+			if (b[j] % 10 == 0)
+				cout << "el numero multiplo de 5 y de 10 es : " << b[j] << endl;
+	}
+
+	for (int j = 0; j<t; j++)
+	{
+		primo = b[j];
+
+		for (i = 2; i <= primo; i++)
+		{
+			if (primo%i == 0)
+				cont++;
+		}
+
+		if (cont == 1)
+			cout << "el numero primo es : " << primo << endl;
+		cont = 0;
+	}
+	system("pause");
+
+}
